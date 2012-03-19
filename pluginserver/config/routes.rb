@@ -1,4 +1,6 @@
 Pluginserver::Application.routes.draw do
+  get "sketchup/automate"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
