@@ -3,7 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry exported="true" kind="lib" path="/Users/shender1/Documents/sphinx4-1.0beta6-src/sphinx4-1.0beta6/lib/jsapi.jar"/>
-	<classpathentry exported="true" kind="lib" path="/Users/shender1/workspaces/TestSphinx/src/osa/ora/sphinx4.jar"/>
+	<classpathentry kind="lib" path="/Users/shender1/Dropbox/sources/autosketchup/sphinx/src/sphinx4.jar"/>
 	<classpathentry exported="true" kind="lib" path="/Users/shender1/workspaces/TestSphinx/src/osa/ora/WSJ_8gau_13dCep_16k_40mel_130Hz_6800Hz.jar"/>
 	<classpathentry exported="true" kind="lib" path="/Users/shender1/workspaces/TestSphinx/src/osa/ora/jetty-http-8.1.1.v20120215.jar"/>
 	<classpathentry exported="true" kind="lib" path="/Users/shender1/workspaces/TestSphinx/src/osa/ora/jetty-util-8.1.1.v20120215.jar"/>
