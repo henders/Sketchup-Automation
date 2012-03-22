@@ -2,8 +2,9 @@ Automate Sketchup by:
 - Using Sphinx4 for voice recognition with custom grammer
 - Use sketchup ruby plugin to create browser window to load rails-app page
 - Rails-app page creates websocket to create persistant connection to sketchup process
+  - Amended to use polling for meantime since Rails is apparantly a bad choice for socketio.
 - Rails-app uses sphinx4 java bindings to listen to microphone and parse out commands
-- Commands are sent via websocket to ruby plugin and executed via local methods that implement commaands
+- Commands are sent via websocket to ruby plugin and executed via local methods that implement commmands
 
 
 Command structure prototype:
