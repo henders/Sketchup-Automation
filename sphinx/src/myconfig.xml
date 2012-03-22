@@ -14,7 +14,7 @@
     <!-- frequently tuned properties                              -->
     <!-- ******************************************************** -->
 
-    <property name="logLevel" value="WARNING"/>
+    <property name="logLevel" value="INFO"/>
 
     <property name="absoluteBeamWidth"  value="-1"/>
     <property name="relativeBeamWidth"  value="1E-80"/>
@@ -92,12 +92,13 @@
     <!-- The Grammar  configuration                               -->
     <!-- ******************************************************** -->
 
-	<component name="jsgfGrammar" type="edu.cmu.sphinx.jsgf.JSGFGrammar">
-		<property name="dictionary" value="dictionary"/>
-		<property name="grammarLocation" value="resource:/"/>
-		<property name="grammarName" value="dict"/>
-		<property name="logMath" value="logMath"/>
-	</component>
+    <component name="jsgfGrammar" type="edu.cmu.sphinx.jsgf.JSGFGrammar">
+        <property name="dictionary" value="dictionary"/>
+        <property name="grammarLocation" value="resource:/"/>
+        <property name="grammarName" value="sketchup"/>
+	<property name="logMath" value="logMath"/>
+    </component>
+
 
     <!-- ******************************************************** -->
     <!-- The Dictionary configuration                            -->
@@ -263,3 +264,18 @@
     </component>
 
 </config>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

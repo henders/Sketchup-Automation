@@ -7,6 +7,7 @@ class SketchupController < ApplicationController
     puts 'Boo1'
     obj = Java::TestListen.new
     obj.StartListening()
+#    Java::edu::cmu::sphinx::demo::helloworld::HelloWorld.main([])
     puts 'Boo2'
   end
 end

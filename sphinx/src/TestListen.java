@@ -14,28 +14,36 @@ public class TestListen {
 	}
 
 	public void StartListening() {
-		ConfigurationManager cm = new ConfigurationManager(TestListen.class.getResource("myconfig.xml"));
-		System.out.println(cm.getGlobalProperties().toString());
-		System.out.println(cm.getConfigURL().getPath());
-		Recognizer recognizer = (Recognizer)cm.lookup("recognizer");
-		recognizer.allocate();
-		Microphone microphone = (Microphone)cm.lookup("microphone");
-		if(!microphone.startRecording()){
-			System.out.println("Cannot start microphone.");
-			recognizer.deallocate();
-			System.exit(1);
-		}
-		System.out.println("Say: (Good morning | Hello) ( Bhiksha | Evandro | Paul | Philip | Rita | Will )");
-		do {
-			System.out.println("Start speaking. Press Ctrl-C to quit.\n");
-			Result result = recognizer.recognize();
-			if(result != null) {
-				String resultText = result.getBestFinalResultNoFiller();
-				System.out.println((new StringBuilder()).append("You said: ").append(resultText).append('\n').toString());
-			} else {
-				System.out.println("I can't hear what you said.\n");
+		try {
+			ConfigurationManager cm = new ConfigurationManager(TestListen.class.getResource("myconfig.xml"));
+			System.out.println(cm.getGlobalProperties().toString());
+			System.out.println(cm.getConfigURL().getPath());
+			
+			Recognizer recognizer = (Recognizer)cm.lookup("recognizer");
+			System.out.println("Recognizer = " + recognizer.toString());
+			recognizer.allocate();
+			System.out.println("Recognizer = " + recognizer.toString());
+			Microphone microphone = (Microphone)cm.lookup("microphone");
+			if(!microphone.startRecording()){
+				System.out.println("Cannot start microphone.");
+				recognizer.deallocate();
+				System.exit(1);
 			}
-		} while(true);
+			System.out.println("Say: (Draw Cube | Undo)");
+			do {
+				System.out.println("Start speaking. Press Ctrl-C to quit.\n");
+				Result result = recognizer.recognize();
+				if(result != null) {
+					String resultText = result.getBestFinalResultNoFiller();
+					System.out.println((new StringBuilder()).append("You said: ").append(resultText).append('\n').toString());
+				} else {
+					System.out.println("I can't hear what you said.\n");
+				}
+			} while(true);
+		}
+		catch (Exception ex) {
+			System.out.println("Error Will Robinson! - " + ex.getMessage());
+		}
 	}
 
 }

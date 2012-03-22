@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Class-Path: . voice_lib/sphinx4.jar voice_lib/WSJ_8gau_13dCep_16k_40me
+ l_130Hz_6800Hz.jar
+Main-Class: TestListen
+
